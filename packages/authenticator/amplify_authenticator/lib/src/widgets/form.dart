@@ -178,20 +178,22 @@ class AuthenticatorFormState<T extends AuthenticatorForm>
     final runtimeActions = this.runtimeActions(context);
     return Form(
       key: formKey,
-      child: Column(
-        children: [
-          ...allFields,
-          Column(
-            children: [
-              if (widget.actions.isNotEmpty) const SizedBox(height: 4),
-              ...widget.actions,
-              if (runtimeActions.isNotEmpty) ...[
-                const Divider(),
-                ...runtimeActions,
-              ],
-            ].spacedBy(const SizedBox(height: 12)),
-          ),
-        ],
+      child: AutofillGroup(
+        child: Column(
+          children: [
+            ...allFields,
+            Column(
+              children: [
+                if (widget.actions.isNotEmpty) const SizedBox(height: 4),
+                ...widget.actions,
+                if (runtimeActions.isNotEmpty) ...[
+                  const Divider(),
+                  ...runtimeActions,
+                ],
+              ].spacedBy(const SizedBox(height: 12)),
+            ),
+          ],
+        ),
       ),
     );
   }

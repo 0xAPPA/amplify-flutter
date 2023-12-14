@@ -16,7 +16,7 @@ final _codeRegex = RegExp(r'^\d{6}$');
 final _uppercase = RegExp(r'[A-Z]');
 final _lowercase = RegExp(r'[a-z]');
 final _numeric = RegExp(r'\d');
-final _symbols = RegExp(r'''[~/`!@#$%^&\"'*(),._?:;{}|<>\]\[\\]''');
+final _symbols = RegExp(r'''[+-~/`!@#$%^&\"'*(),._?:;{}|<>\]\[\\]''');
 
 FormFieldValidator<String> simpleValidator(
   String message, {

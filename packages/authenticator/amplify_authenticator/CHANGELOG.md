@@ -1,3 +1,22 @@
+## 1.5.5
+
+### Fixes
+- fix: correct `package_info_plus` version constraint ([#4583](https://github.com/aws-amplify/amplify-flutter/pull/4583))
+
+## 1.5.4
+
+- Minor bug fixes and improvements## 1.5.3
+
+## 1.5.3
+
+### Fixes
+- fix: Bumped package_info_plus to ">=4.0.1 <=6.0.0"
+
+## 1.5.2
+
+### Fixes
+- fix(authenticator): required phone number validator ([#4106](https://github.com/aws-amplify/amplify-flutter/pull/4106))
+
 ## 1.5.1
 
 - Minor bug fixes and improvements

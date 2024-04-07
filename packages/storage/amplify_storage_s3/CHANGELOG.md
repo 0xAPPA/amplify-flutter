@@ -1,3 +1,16 @@
+## 1.7.0
+
+- Minor bug fixes and improvements
+
+## 1.6.2
+
+### Fixes
+- fix: Bumped drift to ">=2.14.0 <2.15.0" and drift_dev to ">=2.14.0 <2.15.0".
+
+## 1.6.1
+
+- Minor bug fixes and improvements
+
 ## 1.6.0
 
 - Minor bug fixes and improvements

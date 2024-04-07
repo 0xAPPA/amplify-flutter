@@ -1,3 +1,13 @@
+## 0.4.0
+
+### Features
+- feat(api): add copyWith to GraphQLRequest ([#4365](https://github.com/aws-amplify/amplify-flutter/pull/4365))
+
+## 0.3.4
+
+### Fixes
+- fix(api): GraphQL Model Helpers support lowercase model names #4143 (#4144)
+
 ## 0.3.3
 
 - Minor bug fixes and improvements

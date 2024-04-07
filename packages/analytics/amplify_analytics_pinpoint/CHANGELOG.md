@@ -1,3 +1,22 @@
+## 1.7.1
+
+### Fixes
+- fix: correct `package_info_plus` version constraint ([#4583](https://github.com/aws-amplify/amplify-flutter/pull/4583))
+
+## 1.7.0
+
+- Minor bug fixes and improvements
+
+## 1.6.3
+
+### Fixes
+- fix: Bumped built_value to ">=8.6.0 <8.9.0" and built_value_generator to 8.8.1
+- fix: Bumped package_info_plus to ">=4.0.1 <=6.0.0"
+
+## 1.6.2
+
+- Minor bug fixes and improvements
+
 ## 1.6.1
 
 - Minor bug fixes and improvements

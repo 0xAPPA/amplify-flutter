@@ -30,6 +30,7 @@ import 'package:amplify_authenticator/src/state/inherited_forms.dart';
 import 'package:amplify_authenticator/src/state/inherited_strings.dart';
 import 'package:amplify_authenticator/src/utils/dial_code.dart';
 import 'package:amplify_authenticator/src/utils/dial_code_options.dart';
+import 'package:amplify_authenticator/src/utils/unmet_password_requirements.dart';
 import 'package:amplify_authenticator/src/widgets/authenticator_banner.dart';
 import 'package:amplify_authenticator/src/widgets/form.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
@@ -41,6 +42,8 @@ export 'package:amplify_auth_cognito/amplify_auth_cognito.dart'
 export 'package:amplify_authenticator/src/utils/dial_code.dart' show DialCode;
 export 'package:amplify_authenticator/src/utils/dial_code_options.dart'
     show DialCodeOptions;
+    
+export 'package:amplify_authenticator/src/utils/unmet_password_requirements.dart' show UnmetPasswordRequirements;
 
 export 'src/enums/enums.dart' show AuthenticatorStep, Gender;
 export 'src/l10n/auth_strings_resolver.dart' hide ButtonResolverKeyType;

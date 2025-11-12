@@ -38,7 +38,7 @@ class ExceptionResolver extends Resolver<ExceptionResolverKeyType> {
         return ExceptionResolverKeyType.invalidUsername;
       case UserLambdaValidationException()
           when exception.message.contains('DuplicateUsernameException'):
-        return ExceptionResolverKeyType.emailAlreadyExists;
+        return ExceptionResolverKeyType.usernameAlreadyExists;
       case CodeMismatchException():
         return ExceptionResolverKeyType.invalidVerificationCode;
       default:

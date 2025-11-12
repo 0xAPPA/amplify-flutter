@@ -5,7 +5,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-//ignore_for_file: unused_import
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
 
@@ -212,6 +211,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Custom Login Challenge'**
   String get confirmSignInCustomAuth;
+
+  /// The error that is displayed after a wrong username or password was supplied
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect username or password.'**
+  String get incorrectUsernamePassword;
+
+  /// The error that is displayed after an email was used on signup that already exists
+  ///
+  /// In en, this message translates to:
+  /// **'An account with the given email already exists.'**
+  String get emailAlreadyExists;
+
+  /// The error that is displayed after a username was used on signup that already exists
+  ///
+  /// In en, this message translates to:
+  /// **'An account with the given username already exists.'**
+  String get usernameAlreadyExists;
+
+  /// The error that is displayed after a user enters a wrong verification code during password reset
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid verification code provided, please try again.'**
+  String get invalidVerificationCode;
 }
 
 class _AppLocalizationsDelegate

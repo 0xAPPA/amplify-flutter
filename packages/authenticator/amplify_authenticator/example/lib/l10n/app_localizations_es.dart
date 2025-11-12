@@ -1,7 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
-// ignore: unused_import
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -89,4 +87,20 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get confirmSignInCustomAuth => 'Título de formulario personalizado';
+
+  @override
+  String get incorrectUsernamePassword =>
+      'Nombre de usuario o contraseña incorrectos.';
+
+  @override
+  String get emailAlreadyExists =>
+      'Ya existe una cuenta con el correo electrónico indicado.';
+
+  @override
+  String get usernameAlreadyExists =>
+      'Ya existe una cuenta con el nombre de usuario especificado.';
+
+  @override
+  String get invalidVerificationCode =>
+      'Código de verificación no válido, inténtelo de nuevo.';
 }

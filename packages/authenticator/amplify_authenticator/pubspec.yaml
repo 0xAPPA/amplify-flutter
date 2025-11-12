@@ -44,6 +44,7 @@ dev_dependencies:
   path: ^1.8.0
 
 flutter:
+  generate: true
   assets:
     - assets/social-buttons/google.png
 

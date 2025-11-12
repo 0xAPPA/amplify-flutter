@@ -1,0 +1,20 @@
+{
+    "@@locale": "en",
+    "@@context": "amplify_authenticator:exceptions",
+    "incorrectUsernamePassword": "Incorrect username or password.",
+    "@incorrectUsernamePassword": {
+        "description": "The error that is displayed after a wrong username or password was supplied"
+    },
+    "emailAlreadyExists": "An account with the given email already exists.",
+    "@emailAlreadyExists": {
+        "description": "The error that is displayed after an email was used on signup that already exists"
+    },
+    "usernameAlreadyExists": "An account with the given username already exists.",
+    "@usernameAlreadyExists": {
+        "description": "The error that is displayed after a username was used on signup that already exists"
+    },
+    "invalidVerificationCode": "Invalid verification code provided, please try again.",
+    "@invalidVerificationCode": {
+        "description": "The error that is displayed after a user enters a wrong verification code during password reset"
+    }
+}

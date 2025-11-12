@@ -12,10 +12,10 @@ dart run ./tool/generate_country_localization.dart
 
 COUNTRY_OUTPUT_FILES=('lib/src/utils/country_code.dart' 'lib/src/l10n/country_resolver.dart')
 OUTPUT_DIR=lib/src/l10n/generated
-TEMPLATES=('titles_en.arb' 'buttons_en.arb' 'inputs_en.arb' 'countries_en.arb' 'messages_en.arb' 'instructions_en.arb')
-ARB_DIRS=('lib/src/l10n/src/titles' 'lib/src/l10n/src/buttons' 'lib/src/l10n/src/inputs' 'lib/src/l10n/src/countries' 'lib/src/l10n/src/messages'  'lib/src/l10n/src/instructions')
-OUTPUT_CLASSES=('AuthenticatorTitleLocalizations' 'AuthenticatorButtonLocalizations' 'AuthenticatorInputLocalizations' 'AuthenticatorCountryLocalizations' 'AuthenticatorMessageLocalizations' 'AuthenticatorInstructionsLocalizations')
-OUTPUT_FILES=('title_localizations.dart' 'button_localizations.dart' 'input_localizations.dart' 'country_localizations.dart' 'message_localizations.dart' 'instructions_localizations.dart')
+TEMPLATES=('titles_en.arb' 'buttons_en.arb' 'inputs_en.arb' 'countries_en.arb' 'messages_en.arb' 'instructions_en.arb' 'exceptions_en.arb')
+ARB_DIRS=('lib/src/l10n/src/titles' 'lib/src/l10n/src/buttons' 'lib/src/l10n/src/inputs' 'lib/src/l10n/src/countries' 'lib/src/l10n/src/messages'  'lib/src/l10n/src/instructions' 'lib/src/l10n/src/exceptions')
+OUTPUT_CLASSES=('AuthenticatorTitleLocalizations' 'AuthenticatorButtonLocalizations' 'AuthenticatorInputLocalizations' 'AuthenticatorCountryLocalizations' 'AuthenticatorMessageLocalizations' 'AuthenticatorInstructionsLocalizations' 'AuthenticatorExceptionLocalizations')
+OUTPUT_FILES=('title_localizations.dart' 'button_localizations.dart' 'input_localizations.dart' 'country_localizations.dart' 'message_localizations.dart' 'instructions_localizations.dart' 'exception_localizations.dart')
 
 for i in "${!TEMPLATES[@]}"; do
     ARB_DIR=${ARB_DIRS[i]}
@@ -33,18 +33,17 @@ for i in "${!TEMPLATES[@]}"; do
         --output-class $OUTPUT_CLASS \
         --header "$HEADER" \
         --use-deferred-loading \
-        --no-synthetic-package \
         --required-resource-attributes \
         --nullable-getter
 done
 
 # Clean up generated files
-# NOTE: Further applications of `fix` and `format --fix` may be required
+# NOTE: Further applications of `fix` and `format` may be required
 # as changes from one could lead to required changes by the other.
-# TODO(dnys1): Implement do/while mechanism to auto-fix all issues 
+# TODO(dnys1): Implement do/while mechanism to auto-fix all issues
 dart fix --apply
-dart format --fix $OUTPUT_DIR
+dart format $OUTPUT_DIR
 
 for i in "${!COUNTRY_OUTPUT_FILES[@]}"; do
-dart format --fix "${COUNTRY_OUTPUT_FILES[i]}"
+dart format "${COUNTRY_OUTPUT_FILES[i]}"
 done

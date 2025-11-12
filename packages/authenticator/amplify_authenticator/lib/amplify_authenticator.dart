@@ -14,6 +14,7 @@ import 'package:amplify_authenticator/src/enums/enums.dart';
 import 'package:amplify_authenticator/src/keys.dart';
 import 'package:amplify_authenticator/src/l10n/auth_strings_resolver.dart';
 import 'package:amplify_authenticator/src/l10n/authenticator_localizations.dart';
+import 'package:amplify_authenticator/src/l10n/exception_resolver.dart';
 import 'package:amplify_authenticator/src/models/authenticator_builder.dart';
 import 'package:amplify_authenticator/src/models/authenticator_exception.dart';
 import 'package:amplify_authenticator/src/models/totp_options.dart';
@@ -28,7 +29,6 @@ import 'package:amplify_authenticator/src/state/inherited_authenticator_state.da
 import 'package:amplify_authenticator/src/state/inherited_config.dart';
 import 'package:amplify_authenticator/src/state/inherited_forms.dart';
 import 'package:amplify_authenticator/src/state/inherited_strings.dart';
-import 'package:amplify_authenticator/src/utils/dial_code.dart';
 import 'package:amplify_authenticator/src/utils/dial_code_options.dart';
 import 'package:amplify_authenticator/src/widgets/authenticator_banner.dart';
 import 'package:amplify_authenticator/src/widgets/form.dart';
@@ -533,18 +533,19 @@ class _AuthenticatorState extends State<Authenticator> {
   }
 
   void _subscribeToExceptions() {
+    final resolver = widget.stringResolver.exceptions;
     _exceptionSub = _stateMachineBloc.exceptions.listen((exception) {
+      final context = scaffoldMessengerKey.currentContext;
       final onException = widget.onException;
       if (onException != null) {
         onException(exception);
       } else {
         _logger.error('Error in AuthBloc', exception);
       }
-      if (mounted && exception.showBanner) {
-        _showExceptionBanner(
-          type: StatusType.error,
-          message: exception.message,
-        );
+      if (mounted && context != null && exception.showBanner) {
+        final key = ExceptionResolver.keyFromException(exception);
+        final message = resolver.resolve(context, key);
+        _showExceptionBanner(type: StatusType.error, message: message);
       }
     });
   }

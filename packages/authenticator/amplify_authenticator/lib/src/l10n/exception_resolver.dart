@@ -58,7 +58,7 @@ class ExceptionResolver extends Resolver<ExceptionResolverKeyType> {
 
   /// The exception that is thrown if the username provided on signup is already in use.
   String usernameAlreadyExists(BuildContext context) {
-    return AuthenticatorLocalizations.exceptionOf(context).emailAlreadyExists;
+    return AuthenticatorLocalizations.exceptionOf(context).usernameAlreadyExists;
   }
 
   /// The exception that is thrown if the username provided is invalid.

@@ -29,6 +29,18 @@
     "@confirmSignInWithTotpMfaCode": {
         "description": "Title of the Confirm Sign In with Totp MFA Code step and form"
     },
+    "confirmSignInWithOtpCode": "Enter your one-time passcode",
+    "@confirmSignInWithOtpCode": {
+        "description": "Title of the Confirm Sign In with Email MFA Code step and form"
+    },
+    "continueSignInWithEmailMfaSetup": "Add Email for Two-Factor Authentication",
+    "@continueSignInWithEmailMfaSetup": {
+        "description": "Title of the Continue Sign In with Email MFA Setup step and form"
+    },
+    "continueSignInWithMfaSetupSelection": "Choose your preferred two-factor authentication method to set up",
+    "@continueSignInWithMfaSetupSelection": {
+        "description": "Title of the Continue Sign In with MFA Setup Selection step and form"
+    },
     "resetPassword": "Send Code",
     "@resetPassword": {
         "description": "Title of the Reset Password step and form"

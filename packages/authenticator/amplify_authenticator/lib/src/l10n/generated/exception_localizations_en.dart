@@ -20,7 +20,8 @@ class AuthenticatorExceptionLocalizationsEn
       'An account with the given email already exists.';
 
   @override
-  String get userNotExists => 'User does not exist.';
+  String get usernameAlreadyExists =>
+      'An account with the given username already exists.';
 
   @override
   String get invalidVerificationCode =>

@@ -1,13 +1,16 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import 'package:amplify_authenticator/src/l10n/generated/button_localizations.dart';
+// ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+import 'button_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for English (`en`).
 class AuthenticatorButtonLocalizationsEn
     extends AuthenticatorButtonLocalizations {
-  AuthenticatorButtonLocalizationsEn([super.locale = 'en']);
+  AuthenticatorButtonLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
   String get signIn => 'Sign In';
@@ -59,7 +62,7 @@ class AuthenticatorButtonLocalizationsEn
 
   @override
   String backTo(String previousStep) {
-    final temp0 = intl.Intl.selectLogic(previousStep, {
+    String _temp0 = intl.Intl.selectLogic(previousStep, {
       'signUp': 'Sign Up',
       'signIn': 'Sign In',
       'confirmSignUp': 'Confirm Sign-up',
@@ -71,18 +74,18 @@ class AuthenticatorButtonLocalizationsEn
       'confirmVerifyUser': 'Confirm Verify User',
       'other': 'ERROR',
     });
-    return 'Back to $temp0';
+    return 'Back to $_temp0';
   }
 
   @override
   String signInWith(String provider) {
-    final temp0 = intl.Intl.selectLogic(provider, {
+    String _temp0 = intl.Intl.selectLogic(provider, {
       'google': 'Google',
       'facebook': 'Facebook',
       'amazon': 'Amazon',
       'apple': 'Apple',
       'other': 'ERROR',
     });
-    return 'Sign In with $temp0';
+    return 'Sign In with $_temp0';
   }
 }

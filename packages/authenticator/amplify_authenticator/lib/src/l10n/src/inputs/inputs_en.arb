@@ -220,5 +220,5 @@
     "selectEmail": "Email",
     "@selectEmail": {
         "description": "Label for the radio button to select email as the user's chosen MFA method."
-    },
+    }
 }

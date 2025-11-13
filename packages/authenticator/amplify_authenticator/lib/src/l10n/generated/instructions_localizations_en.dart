@@ -1,12 +1,17 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import 'package:amplify_authenticator/src/l10n/generated/instructions_localizations.dart';
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'instructions_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for English (`en`).
 class AuthenticatorInstructionsLocalizationsEn
     extends AuthenticatorInstructionsLocalizations {
-  AuthenticatorInstructionsLocalizationsEn([super.locale = 'en']);
+  AuthenticatorInstructionsLocalizationsEn([String locale = 'en'])
+    : super(locale);
 
   @override
   String get totpStep1Title => 'Step 1: Download an Authenticator app';

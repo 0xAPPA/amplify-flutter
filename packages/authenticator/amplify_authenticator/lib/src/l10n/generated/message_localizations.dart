@@ -3,11 +3,13 @@
 
 import 'dart:async';
 
-import 'package:amplify_authenticator/src/l10n/generated/message_localizations_en.dart'
-    deferred as message_localizations_en;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
+
+import 'message_localizations_en.dart' deferred as message_localizations_en;
+
+// ignore_for_file: type=lint
 
 /// Callers can lookup localized strings with an instance of AuthenticatorMessageLocalizations
 /// returned by `AuthenticatorMessageLocalizations.of(context)`.
@@ -62,7 +64,7 @@ import 'package:intl/intl.dart' as intl;
 /// property.
 abstract class AuthenticatorMessageLocalizations {
   AuthenticatorMessageLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale);
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 

@@ -3,11 +3,13 @@
 
 import 'dart:async';
 
-import 'package:amplify_authenticator/src/l10n/generated/title_localizations_en.dart'
-    deferred as title_localizations_en;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
+
+import 'title_localizations_en.dart' deferred as title_localizations_en;
+
+// ignore_for_file: type=lint
 
 /// Callers can lookup localized strings with an instance of AuthenticatorTitleLocalizations
 /// returned by `AuthenticatorTitleLocalizations.of(context)`.
@@ -62,7 +64,7 @@ import 'package:intl/intl.dart' as intl;
 /// property.
 abstract class AuthenticatorTitleLocalizations {
   AuthenticatorTitleLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale);
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -138,24 +140,6 @@ abstract class AuthenticatorTitleLocalizations {
   /// In en, this message translates to:
   /// **'Enter your one-time passcode'**
   String get confirmSignInWithTotpMfaCode;
-
-  /// Title of the Confirm Sign In with Email MFA Code step and form
-  ///
-  /// In en, this message translates to:
-  /// **'Enter your one-time passcode'**
-  String get confirmSignInWithOtpCode;
-
-  /// Title of the Continue Sign In with Email MFA Setup step and form
-  ///
-  /// In en, this message translates to:
-  /// **'Add Email for Two-Factor Authentication'**
-  String get continueSignInWithEmailMfaSetup;
-
-  /// Title of the Continue Sign In with MFA Setup Selection step and form
-  ///
-  /// In en, this message translates to:
-  /// **'Choose your preferred two-factor authentication method to set up'**
-  String get continueSignInWithMfaSetupSelection;
 
   /// Title of the Reset Password step and form
   ///

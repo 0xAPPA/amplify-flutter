@@ -1,12 +1,16 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import 'package:amplify_authenticator/src/l10n/generated/title_localizations.dart';
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'title_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for English (`en`).
 class AuthenticatorTitleLocalizationsEn
     extends AuthenticatorTitleLocalizations {
-  AuthenticatorTitleLocalizationsEn([super.locale = 'en']);
+  AuthenticatorTitleLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
   String get confirmSignUp => 'Enter your confirmation code';
@@ -29,17 +33,6 @@ class AuthenticatorTitleLocalizationsEn
 
   @override
   String get confirmSignInWithTotpMfaCode => 'Enter your one-time passcode';
-
-  @override
-  String get confirmSignInWithOtpCode => 'Enter your one-time passcode';
-
-  @override
-  String get continueSignInWithEmailMfaSetup =>
-      'Add Email for Two-Factor Authentication';
-
-  @override
-  String get continueSignInWithMfaSetupSelection =>
-      'Choose your preferred two-factor authentication method to set up';
 
   @override
   String get resetPassword => 'Send Code';

@@ -1,13 +1,16 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import 'package:amplify_authenticator/src/l10n/generated/input_localizations.dart';
+// ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+import 'input_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for English (`en`).
 class AuthenticatorInputLocalizationsEn
     extends AuthenticatorInputLocalizations {
-  AuthenticatorInputLocalizationsEn([super.locale = 'en']);
+  AuthenticatorInputLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
   String get username => 'Username';
@@ -44,12 +47,12 @@ class AuthenticatorInputLocalizationsEn
 
   @override
   String genders(String gender) {
-    final temp0 = intl.Intl.selectLogic(gender, {
+    String _temp0 = intl.Intl.selectLogic(gender, {
       'male': 'male',
       'female': 'female',
       'other': 'other',
     });
-    return temp0;
+    return '$_temp0';
   }
 
   @override
@@ -103,25 +106,25 @@ class AuthenticatorInputLocalizationsEn
 
   @override
   String passwordRequirementsCharacterType(String characterType) {
-    final temp0 = intl.Intl.selectLogic(characterType, {
+    String _temp0 = intl.Intl.selectLogic(characterType, {
       'requiresUppercase': 'uppercase',
       'requiresLowercase': 'lowercase',
       'requiresNumbers': 'number',
       'requiresSymbols': 'symbol',
       'other': '',
     });
-    return ' $temp0';
+    return ' $_temp0';
   }
 
   @override
   String passwordRequirementsAtLeast(int numCharacters, String characterType) {
-    final temp0 = intl.Intl.pluralLogic(
+    String _temp0 = intl.Intl.pluralLogic(
       numCharacters,
       locale: localeName,
       other: '$numCharacters$characterType characters',
       one: '1$characterType character',
     );
-    return 'at least $temp0';
+    return 'at least $_temp0';
   }
 
   @override
@@ -148,9 +151,9 @@ class AuthenticatorInputLocalizationsEn
   String get selectTotp => 'Authenticator App (TOTP)';
 
   @override
-  String get selectEmail => 'Email';
-
-  @override
   String get totpCodePrompt =>
       'Please enter the code from your registered Authenticator app';
+
+  @override
+  String get selectEmail => 'Email';
 }

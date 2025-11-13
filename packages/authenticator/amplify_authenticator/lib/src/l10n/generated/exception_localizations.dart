@@ -111,11 +111,11 @@ abstract class AuthenticatorExceptionLocalizations {
   /// **'An account with the given email already exists.'**
   String get emailAlreadyExists;
 
-  /// The error that is displayed after a user tries to log in with a username that does not exist
+  /// The error that is displayed after a username was used on signup that already exists
   ///
   /// In en, this message translates to:
-  /// **'User does not exist.'**
-  String get userNotExists;
+  /// **'An account with the given username already exists.'**
+  String get usernameAlreadyExists;
 
   /// The error that is displayed after a user enters a wrong verification code during password reset
   ///

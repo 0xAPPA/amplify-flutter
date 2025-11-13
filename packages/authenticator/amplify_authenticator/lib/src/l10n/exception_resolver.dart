@@ -32,7 +32,7 @@ class ExceptionResolver extends Resolver<ExceptionResolverKeyType> {
       case NotAuthorizedServiceException():
         return ExceptionResolverKeyType.incorrectUsernamePassword;
       case UsernameExistsException():
-        return ExceptionResolverKeyType.usernameAlreadyExists;
+        return ExceptionResolverKeyType.emailAlreadyExists;
       case UserLambdaValidationException()
           when exception.message.contains('InvalidUsernameException'):
         return ExceptionResolverKeyType.invalidUsername;
@@ -86,7 +86,7 @@ class ExceptionResolver extends Resolver<ExceptionResolverKeyType> {
         return invalidUsername(context);
       case ExceptionResolverKeyType.invalidVerificationCode:
         return invalidVerificationCode(context);
-      case ExceptionResolverKeyType.unknown:
+      default:
         return 'An unknown error occurred.';
     }
   }
